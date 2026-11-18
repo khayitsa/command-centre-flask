@@ -1,0 +1,13 @@
+{% extends "_auth_base.html" %}
+{% block title %}Sign in{% endblock %}
+{% block body %}
+<h1>Sign in</h1>
+<p class="lead">Use the account your administrator created for you.</p>
+{% for message in get_flashed_messages() %}<div role="alert" class="error">{{ message }}</div>{% endfor %}
+<form method="post" action="{{ url_for('auth.login') }}">
+  <label>Email<input name="email" type="email" autocomplete="username" required autofocus></label>
+  <label>Password<input name="password" type="password" autocomplete="current-password" required></label>
+  <button class="primary" type="submit">Sign in</button>
+</form>
+{% if signup_open %}<p class="alt"><a href="{{ url_for('auth.register') }}">Create an account</a></p>{% endif %}
+{% endblock %}

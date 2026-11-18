@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#254e40">
+  <title>Command Centre</title>
+  <meta name="description" content="Your companies, projects and tasks in one calm workspace.">
+  <link rel="icon" href="{{ url_for('static', filename='icon.svg') }}" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="{{ url_for('static', filename='icon-192.png') }}">
+  <link rel="manifest" href="{{ url_for('static', filename='manifest.webmanifest') }}">
+  <link rel="stylesheet" href="{{ asset('app.css') }}">
+</head>
+<body>
+  <div id="root" data-user="{{ user_email }}"></div>
+  <noscript>Command Centre needs JavaScript.</noscript>
+  <script type="module" src="{{ asset('app.js') }}"></script>
+</body>
+</html>

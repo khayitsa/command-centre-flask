@@ -1,0 +1,16 @@
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:grid;place-items:center;background:#f8f9fb;color:#25332f;font:14px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+.card{width:min(400px,calc(100% - 32px));background:#fff;border:1px solid #e0e6e1;border-radius:14px;padding:32px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:16px;margin-bottom:22px}
+.mark{display:grid;place-items:center;width:34px;height:34px;border-radius:9px;background:#254e40;color:#fff;font-size:18px}
+h1{font-size:24px;margin:0 0 6px;font-weight:600;letter-spacing:-.5px}
+.lead{color:#64766a;margin:0 0 20px}
+label{display:flex;flex-direction:column;gap:6px;font-size:12px;font-weight:500;margin-bottom:14px}
+label small{font-weight:400;color:#8a938e}
+input{font:inherit;padding:10px;border:1px solid #dfe5e0;border-radius:6px;width:100%}
+input:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid #8cbaaa;outline-offset:2px}
+.primary{width:100%;font:inherit;font-weight:600;padding:11px;border:1px solid #254e40;border-radius:7px;background:#254e40;color:#fff;cursor:pointer;margin-top:4px}
+.primary:hover{background:#183e31}
+.error{background:#fff1ed;border:1px solid #e8b8aa;color:#8b3726;padding:11px 13px;border-radius:8px;margin-bottom:16px;font-size:13px}
+.alt{text-align:center;margin:18px 0 0}
+a{color:#315f49}

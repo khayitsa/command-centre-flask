@@ -1,0 +1,14 @@
+{% extends "_auth_base.html" %}
+{% block title %}Create account{% endblock %}
+{% block body %}
+<h1>Create an account</h1>
+<p class="lead">The email you use here is what workspace administrators grant access to.</p>
+{% for message in get_flashed_messages() %}<div role="alert" class="error">{{ message }}</div>{% endfor %}
+<form method="post" action="{{ url_for('auth.register') }}">
+  <label>Email<input name="email" type="email" autocomplete="username" required autofocus></label>
+  <label>Password <small>(at least 10 characters)</small><input name="password" type="password" autocomplete="new-password" minlength="10" required></label>
+  <label>Confirm password<input name="confirm" type="password" autocomplete="new-password" minlength="10" required></label>
+  <button class="primary" type="submit">Create account</button>
+</form>
+<p class="alt"><a href="{{ url_for('auth.login_form') }}">Back to sign in</a></p>
+{% endblock %}
